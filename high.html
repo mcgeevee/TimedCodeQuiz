@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Scores</title>
+    <link rel="stylesheet" href="./assests/css/styles.css">
+</head>
+
+<body>
+    <header class="info-bar">
+        <div class="high-scores"><a href="index.html">Restart Game</a></div>
+        <div class="timer">Time: <span id="time">60</span></div>
+    </header>
+
+    <main>
+        <section class="scores">
+            <div>
+                <h1>High Scores</h1>
+            </div>
+            <div>
+                <ol class="score-list"></ol>
+            </div>
+        </section>
+
+        <section class="clear-high-scores">
+            <div class="clear-high-scores">
+                <button id="clearScores">Clear High Scores</button>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script>
+    var score_list = document.querySelector(".score-list");
+    var clearClick = document.querySelector("#clearScores");
+
+    for (var i = 0; i < localStorage.length; i++) {
+        // This checks to make sure that the high score stored in local storage is not displayed on the high score list.
+        if (localStorage.key(i) != "highScore") {
+            var item = document.createElement("li");
+            item.textContent = localStorage.key(i) + " - " + localStorage.getItem(localStorage.key(i));
+            score_list.appendChild(item);
+        }
+    }
+
+    // This clears the local storage and reloads the page.
+    clearClick.addEventListener("click", function () {
+        localStorage.clear();
+        location.reload();
+    })
+    
+</script>
+
+</html>

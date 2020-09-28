@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timed Code Quiz</title>
+    <link rel="stylesheet" href="./assests/css/styles.css">
+</head>
+
+<body>
+    <!-- Info Bar has a link to the high scores page and the timer. -->
+    <header class="info-bar">
+        <div class="high-scores"><a href="high.html">View High Scores</a></div>
+        <div class="timer">Time: <span id="time">60</span></div>
+    </header>
+
+    <section class="instructions">
+        <div class="instruction-box">
+            <h1>Timed MARVEL Quiz</h1>
+            <p>Try and answer the following questions within one minute!</p>
+            <p>You will be penalized ten seconds for incorrect answers.</p>
+            <p>Your final score will be the time remaining.</p>
+        </div>
+        <div class="button-control">
+            <button type="button" id="beginButton">Let's begin!</button>
+        </div>
+    </section>
+
+    <main>
+        <section class="questions">
+            <div class="question-block">
+                <p class="question"></p>
+            </div>
+            <!-- This is for spacing on the page. -->
+            <div class="break"></div>
+            <div class="choices">
+                <button class="answer-choice" id="answer1"></button>
+                <button class="answer-choice" id="answer2"></button>
+                <button class="answer-choice" id="answer3"></button>
+                <button class="answer-choice" id="answer4"></button>
+            </div>
+            <div class="end-of-game">
+                <div>
+                    <p class="final-score"></p>
+                </div>
+                <div>
+                    <form action="high.html" class="initial-form">
+                        Enter your initials: <input type="text" name="initials" id="user_initials">
+                        <br>
+                        <br>
+                        <input type="submit" class="submit" onclick="resetGame()">
+                    </form>
+                </div>
+            </div>
+            <div class="result-block">
+                <p class="result"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="./assests/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+body {
+  background-color: lightpink
+}
+
+.info-bar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.info-bar div {
+  font-size: 35px;
+}
+
+.time {
+  padding-left: 50%;
+}
+
+.instructions h1,
+.instructions p,
+.button-control,
+.question-block {
+  display: flex;
+  justify-content: center;
+}
+
+.instruction-box {
+  padding-top: 20px;
+  line-height: 100%;
+}
+
+.instructions h1 {
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace
+}
+
+.instructions p {
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif
+}
+
+.instruction-box {
+  font-size: 25px;
+  padding-bottom: 10%;
+}
+
+.button-control button {
+  opacity: 70%;
+  background-color: lightgrey (238, 201, 186);
+  border: 0px;
+  padding: 15px 32px;
+  font-size: 25px;
+  box-shadow: 0 9px #999;
+}
+
+.button-control button:hover {
+  opacity: 100%;
+}
+
+.button-control button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button-control button:active:after {
+  opacity: 70%;
+  background-color: rgb(238, 201, 186);
+  border: 0px;
+  padding: 15px 32px;
+  font-size: 25px;
+  box-shadow: 0 9px #999;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.question {
+  font-size: 35px;
+}
+
+.questions {
+  padding-top: 150px;
+}
+
+.choices,
+.answer-choice {
+  display: none;
+  margin: auto;
+  width: 50%;
+}
+
+.choices {
+  border-bottom: 1px solid;
+}
+
+.answer-choice {
+  background-color: #4ac1d1;
+  border: 1px solid rgb(49, 155, 49);
+  font-size: 25px;
+  padding: 10px 24px;
+  cursor: pointer;
+  width: 80%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.answer-choice:hover {
+  background-color: #3e8e41;
+}
+
+.answer-choice:last-child {
+  margin-bottom: 50px;
+}
+
+.result {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.end-of-game {
+  display: none;
+}
+
+
+.final-score,
+.initial-form {
+  text-align: center;
+  font-size: 50px;
+}
+
+.initial-form input {
+  font-size: 50px;
+  line-height: 10px;
+  width: 200px;
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.submit {
+  background-color: orchid;
+  margin-top: 15px;
+  padding: 10px 0px;
+}
+
+input.submit {
+  font-size: 25px;
+}
+
+.submit:hover {
+  background-color: #3e8e41;
+}
+
+.scores {
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+
+.scores h1 {
+  font-size: 40px;
+}
+
+.score-list {
+  font-size: 35px;
+  width: 25%;
+  margin: 0 auto;
+}
+
+.clear-high-scores {
+  display: flex;
+  margin: 0 auto;
+}
+
+.clear-high-scores button {
+  background-color: orchid;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+.clear-high-scores button:hover {
+  background-color: #3e8e41;
+}
